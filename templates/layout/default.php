@@ -41,8 +41,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
         </div>
         <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a>
             <?php if ($username): ?>
             <a <?= $this->Html->link(__('Logout'), ['controller' => 'Users' , 'action' => 'logout']) ?> </a>
             <?php endif; ?>
