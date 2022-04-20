@@ -28,31 +28,40 @@ $cakeDescription = 'Sistema Login';
     <?= $this->Html->meta('icon') ?>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
     <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake']) ?>
-
+    <?= $this->Html->css(['menu']) ?>
+    
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="top-nav-title">
-            <a><span>Sistema</span>Login</a>
+    <nav>
+        <a><?= $this->Html->link(__('Sistema Login'), ['action' => 'index'], ['class' => 'logo']) ?></a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
             <?php if ($username): ?>
-            <a><?= $this->Html->link(__('Lista de Usuários'), ['action' => 'index'], ['class' => 'side-nav-item']) ?></a>
-            <a <?= $this->Html->link(__('Filmes'), ['controller' => 'Users' , 'action' => 'filmes']) ?> </a>
-        </div>
-        <div class="top-nav-links">
-            <a <?= $this->Html->link(__('Logout'), ['controller' => 'Users' , 'action' => 'logout']) ?> </a>
+          <li><a <?= $this->Html->link(__('Filmes'), ['controller' => 'Users' , 'action' => 'filmes']) ?> </a></li>
+          <li><a <?= $this->Html->link(__('Logout'), ['controller' => 'Users' , 'action' => 'logout']) ?> </a></li>
             <?php endif; ?>
-        </div>
-    </nav>
+        </ul>
+      </nav>
+    <header>
+    </header>
     <main class="main">
         <div class="container">
             <?= $this->Flash->render() ?>
             <?= $this->fetch('content') ?>
         </div>
+        <?= $this->Html->script(['mobile-navbar']) ?>
     </main>
     <footer>
     </footer>
