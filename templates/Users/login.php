@@ -22,7 +22,7 @@
                 echo $this->Form->control('password');
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Entrar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

@@ -22,7 +22,7 @@
                     echo $this->Form->control('roles_id', ['options' => $roles]);
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Criar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>
