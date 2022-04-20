@@ -93,7 +93,7 @@ class UsersTable extends Table
                 'confirmar_password',
                 'compareWith', [
                     'rule' => ['compareWith' , 'password'],
-                    'message' => 'Password not equal.'
+                    'message' => 'A senha não é igual.'
                 ]
             );
 

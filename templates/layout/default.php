@@ -14,7 +14,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Sistema Login';
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,10 +38,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
+            <a><span>Sistema</span>Login</a>
+            <?php if ($username): ?>
+            <a><?= $this->Html->link(__('Lista de Usuários'), ['action' => 'index'], ['class' => 'side-nav-item']) ?></a>
+            <a <?= $this->Html->link(__('Filmes'), ['controller' => 'Users' , 'action' => 'filmes']) ?> </a>
         </div>
         <div class="top-nav-links">
-            <?php if ($username): ?>
             <a <?= $this->Html->link(__('Logout'), ['controller' => 'Users' , 'action' => 'logout']) ?> </a>
             <?php endif; ?>
         </div>
